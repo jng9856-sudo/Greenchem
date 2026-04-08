@@ -19,8 +19,8 @@ export default function TextileDetail() {
         "Optimally prepares fibers for further finishing steps"
       ],
       tableData: [
-        { series: "Low-Foam Detergents", subSeries: "NF / BTA Series", use: "Scouring agent", properties: "Excellent wetting and detergency with controlled foaming for high-speed processing." },
-        { series: "Wetting Agents", subSeries: "OT / TDA / DA Series", use: "Wetting agent", properties: "" }
+        { series: "Low-Foam Detergents", structure: "NF / BTA Series", use: "Scouring agent", properties: "Excellent wetting and detergency with controlled foaming for high-speed processing." },
+        { series: "Wetting Agents", structure: "OT / TDA / DA Series", use: "Wetting agent", properties: "" }
       ]
     },
     {
@@ -34,8 +34,8 @@ export default function TextileDetail() {
         "Boosts overall color yield and fabric appearance"
       ],
       tableData: [
-        { series: "Leveling Agents", subSeries: "Amine Ethers / RP Series", use: "Leveling agent", properties: "Ensures uniform dye uptake and migration control." },
-        { series: "Dispersants", subSeries: "SP / DS / TSP Series", use: "Dispersant", properties: "" }
+        { series: "Leveling Agents", structure: "Amine Ethers / RP Series", use: "Leveling agent", properties: "Ensures uniform dye uptake and migration control." },
+        { series: "Dispersants", structure: "SP / DS / TSP Series", use: "Dispersant", properties: "" }
       ]
     },
     {
@@ -49,7 +49,8 @@ export default function TextileDetail() {
         "Guarantees incredibly smooth mechanical processing"
       ],
       tableData: [
-        { series: "Spin Finish Oils", subSeries: "FB Series / PEG Esters", use: "Spin finish", properties: "Provides fiber cohesion, antistatic properties, and smooth processing." }
+        { series: "FB-", structure: "Polyoxyalkylene alkyl ether or/and PEG etc.", use: "Spin Finish Oils", properties: "Emulsions for textiles in different versions" },
+        { series: "PEG-", structure: "Polyoxyethylene glycol (PEG)", use: "Scouring agent/Lubrication", properties: "Water-soluble polymer providing lubrication and moisture retention" }
       ]
     }
   ];
@@ -164,14 +165,16 @@ export default function TextileDetail() {
                                     <thead>
                                         <tr className="bg-emerald-900 text-white">
                                             <th className="px-6 py-5 font-bold tracking-wide rounded-tl-xl whitespace-nowrap">Product Series</th>
+                                            <th className="px-6 py-5 font-bold tracking-wide">Chemical Structure</th>
                                             <th className="px-6 py-5 font-bold tracking-wide whitespace-nowrap">Use</th>
                                             <th className="px-6 py-5 font-bold tracking-wide rounded-tr-xl">Properties</th>
                                         </tr>
                                     </thead>
                                     <tbody className="divide-y divide-emerald-100 bg-white">
-                                        {product.tableData.map((row: any, rIdx) => (
+                                        {product.tableData.map((row, rIdx) => (
                                             <tr key={rIdx} className="hover:bg-emerald-50/40 transition-colors">
-                                                <td className="px-6 py-5 font-bold text-emerald-700 whitespace-nowrap border-r border-emerald-50/50">{row.subSeries || row.series}</td>
+                                                <td className="px-6 py-5 font-bold text-emerald-700 whitespace-nowrap border-r border-emerald-50/50">{row.series}</td>
+                                                <td className="px-6 py-5 text-gray-800 font-medium leading-relaxed min-w-[200px] border-r border-emerald-50/50">{row.structure}</td>
                                                 <td className="px-6 py-5 text-gray-600 font-medium leading-relaxed min-w-[150px] border-r border-emerald-50/50">{row.use}</td>
                                                 <td className="px-6 py-5 text-gray-600 leading-relaxed min-w-[250px]">{row.properties}</td>
                                             </tr>

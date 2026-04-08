@@ -3,53 +3,54 @@
 import { Navigation } from "@/components/Navigation";
 import { Footer } from "@/components/Footer";
 import { motion } from "framer-motion";
-import { ArrowLeft, CheckCircle2, Scissors, Sparkles, Database } from "lucide-react";
+import { ArrowLeft, CheckCircle2, Leaf, Sparkles, Database } from "lucide-react";
 import Link from "next/link";
 
-export default function TextileDetail() {
+export default function AgrochemicalDetail() {
   const products = [
     {
-      id: "scouring",
-      name: "Scouring & Wetting",
-      series: "Low-Foam Detergents (NF/BTA) / Wetting Agents (OT/TDA/DA)",
-      description: "Pretreatment agents that prepare textile fibers effectively, offering excellent wetting and detergency.",
+      id: "emulsifiers",
+      name: "Emulsifiers & Solubilizers",
+      series: "Fatty Acid Esters (ML/MS/MO/CO/CAW) / Styrenated Ethers (SP/DS/TSP)",
+      description: "Surfactant solutions designed to perfectly emulsify and solubilize complex agricultural formulations.",
       benefits: [
-        "Excellent wetting and detergency capabilities",
-        "Controlled foaming for high-speed textile processing",
-        "Optimally prepares fibers for further finishing steps"
+        "Excellent solvent matching for aromatic actives",
+        "Provides robust formulation stability",
+        "Wide compatibility with diverse agrochemicals"
       ],
       tableData: [
-        { series: "Low-Foam Detergents", subSeries: "NF / BTA Series", use: "Scouring agent", properties: "Excellent wetting and detergency with controlled foaming for high-speed processing." },
-        { series: "Wetting Agents", subSeries: "OT / TDA / DA Series", use: "Wetting agent", properties: "" }
+        { series: "ML-, MS-, MO-", structure: "Polyoxyethylene Monolaurate/Stearate/Oleate", use: "Emulsifier", properties: "Good emulsification, dispersion, and spreading performance" },
+        { series: "CO-, CAW-", structure: "Polyoxyethylene Castor Oil / Castor Wax", use: "Emulsifier", properties: "Excellent compatibility with hydrophobic actives, enhanced penetration" },
+        { series: "SP, DS-, TSP-", structure: "Polyoxyalkylene/Polyoxyethylene styrenated Phenyl Ether", use: "Emulsifier", properties: "Excellent compatibility with polar organic solvents" }
       ]
     },
     {
-      id: "dyeing",
-      name: "Dyeing Auxiliaries",
-      series: "Leveling Agents (Amine Ethers/RP) / Dispersants (SP/DS/TSP)",
-      description: "Crucial dyeing additives that support even color distribution and stability during the textile dyeing phase.",
+      id: "penetrants",
+      name: "Penetrants & Wetters",
+      series: "Tallow Amine Ethers (TAM) / Wetting Agents (NF/DA/LA)",
+      description: "High-performance wetting agents that significantly lower surface tension for maximum leaf coverage and absorption.",
       benefits: [
-        "Ensures perfectly uniform dye uptake and migration control",
-        "Prevents dye agglomeration with premium dispersants",
-        "Boosts overall color yield and fabric appearance"
+        "Powerful wetting into crop surfaces",
+        "Deep penetration through waxy plant cuticles",
+        "Accelerates herbicide and pesticide efficacy"
       ],
       tableData: [
-        { series: "Leveling Agents", subSeries: "Amine Ethers / RP Series", use: "Leveling agent", properties: "Ensures uniform dye uptake and migration control." },
-        { series: "Dispersants", subSeries: "SP / DS / TSP Series", use: "Dispersant", properties: "" }
+        { series: "TAM-", structure: "Polyoxyethylene Tallow Amine Ether", use: "Penetration enhancer", properties: "Powerful wetting and deep penetration through waxy cuticle layers" },
+        { series: "LF-,DA-,LA-", structure: "Polyoxyethylene Lauryl/Tridecyl ether", use: "Wetting, Spreading agents", properties: "High foaming and excellent wetting properties" }
       ]
     },
     {
-      id: "lubrication",
-      name: "Lubrication & Finishing",
-      series: "Spin Finish Oils (FB Series / PEG Esters)",
-      description: "Advanced finishing oils and lubricants designed to protect yarns and grant the final fabric its premium texture.",
+      id: "functional-additives",
+      name: "Functional Additives",
+      series: "Defoaming & Dispersion (NF/LF/PE Series)",
+      description: "Essential additives to dynamically regulate physical properties of tank mixes during application.",
       benefits: [
-        "Provides excellent fiber cohesion and protection",
-        "Imparts powerful antistatic properties",
-        "Guarantees incredibly smooth mechanical processing"
+        "Dynamically control foam generation",
+        "Improve dispersion stability securely in tank mixes",
+        "High defoaming & targeted low-foaming performance"
       ],
       tableData: [
-        { series: "Spin Finish Oils", subSeries: "FB Series / PEG Esters", use: "Spin finish", properties: "Provides fiber cohesion, antistatic properties, and smooth processing." }
+        { series: "NF-, PE-", structure: "Polyoxyalkylene alkyl ether / EO-PO-EO Type", use: "Emulsifier/Defoamer", properties: "Excellent wetting, defoaming, and dispersion control" }
       ]
     }
   ];
@@ -62,7 +63,7 @@ export default function TextileDetail() {
       <section className="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden">
         <div 
           className="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat"
-          style={{ backgroundImage: "url('https://images.unsplash.com/photo-1620799140408-edc6dcb6d633?q=80&w=800&auto=format&fit=crop')" }}
+          style={{ backgroundImage: "url('/images/agro.png')" }}
         >
           <div className="absolute inset-0 bg-emerald-950/80 backdrop-blur-sm" />
         </div>
@@ -74,7 +75,7 @@ export default function TextileDetail() {
           
           <div className="flex items-center gap-4 mb-6">
             <div className="w-16 h-16 rounded-2xl bg-emerald-500/20 flex items-center justify-center border border-emerald-400/30 text-emerald-300">
-                <Scissors className="w-8 h-8" />
+                <Leaf className="w-8 h-8" />
             </div>
             <span className="text-emerald-400 font-bold tracking-widest uppercase text-sm border border-emerald-400/30 px-4 py-1.5 rounded-full bg-emerald-950/50">
                 Segment Details
@@ -86,7 +87,7 @@ export default function TextileDetail() {
             animate={{ opacity: 1, y: 0 }}
             className="text-5xl lg:text-[5rem] font-playfair font-bold text-white leading-tight mb-6 tracking-tight"
           >
-            Textile Processing Agents
+            Agrochemical Adjuvants
           </motion.h1>
           
           <motion.p 
@@ -95,7 +96,7 @@ export default function TextileDetail() {
             transition={{ delay: 0.1 }}
             className="text-xl text-emerald-50/80 max-w-3xl leading-relaxed font-medium"
           >
-            Comprehensive solutions from pretreatment scouring to final finishing.
+            Enhancing bio-efficacy through superior wetting, spreading, and penetration.
           </motion.p>
         </div>
       </section>
@@ -164,14 +165,16 @@ export default function TextileDetail() {
                                     <thead>
                                         <tr className="bg-emerald-900 text-white">
                                             <th className="px-6 py-5 font-bold tracking-wide rounded-tl-xl whitespace-nowrap">Product Series</th>
+                                            <th className="px-6 py-5 font-bold tracking-wide">Chemical Structure</th>
                                             <th className="px-6 py-5 font-bold tracking-wide whitespace-nowrap">Use</th>
                                             <th className="px-6 py-5 font-bold tracking-wide rounded-tr-xl">Properties</th>
                                         </tr>
                                     </thead>
                                     <tbody className="divide-y divide-emerald-100 bg-white">
-                                        {product.tableData.map((row: any, rIdx) => (
+                                        {product.tableData.map((row, rIdx) => (
                                             <tr key={rIdx} className="hover:bg-emerald-50/40 transition-colors">
-                                                <td className="px-6 py-5 font-bold text-emerald-700 whitespace-nowrap border-r border-emerald-50/50">{row.subSeries || row.series}</td>
+                                                <td className="px-6 py-5 font-bold text-emerald-700 whitespace-nowrap border-r border-emerald-50/50">{row.series}</td>
+                                                <td className="px-6 py-5 text-gray-800 font-medium leading-relaxed min-w-[200px] border-r border-emerald-50/50">{row.structure}</td>
                                                 <td className="px-6 py-5 text-gray-600 font-medium leading-relaxed min-w-[150px] border-r border-emerald-50/50">{row.use}</td>
                                                 <td className="px-6 py-5 text-gray-600 leading-relaxed min-w-[250px]">{row.properties}</td>
                                             </tr>

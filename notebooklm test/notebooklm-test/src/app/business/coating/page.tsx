@@ -3,53 +3,88 @@
 import { Navigation } from "@/components/Navigation";
 import { Footer } from "@/components/Footer";
 import { motion } from "framer-motion";
-import { ArrowLeft, CheckCircle2, Scissors, Sparkles, Database } from "lucide-react";
+import { ArrowLeft, CheckCircle2, Paintbrush, Sparkles, Database } from "lucide-react";
 import Link from "next/link";
 
-export default function TextileDetail() {
+export default function CoatingDetail() {
   const products = [
     {
-      id: "scouring",
-      name: "Scouring & Wetting",
-      series: "Low-Foam Detergents (NF/BTA) / Wetting Agents (OT/TDA/DA)",
-      description: "Pretreatment agents that prepare textile fibers effectively, offering excellent wetting and detergency.",
+      id: "amine-ethers",
+      name: "Amine Ethers",
+      series: "LM / SM / TAM Series",
+      description: "Emulsifiers & dispersants with antistatic properties. Ideal for pigment dispersion.",
       benefits: [
-        "Excellent wetting and detergency capabilities",
-        "Controlled foaming for high-speed textile processing",
-        "Optimally prepares fibers for further finishing steps"
+        "High-performance emulsification and dispersion",
+        "Imparts excellent antistatic properties",
+        "Optimized specifically for superior pigment dispersion"
       ],
       tableData: [
-        { series: "Low-Foam Detergents", subSeries: "NF / BTA Series", use: "Scouring agent", properties: "Excellent wetting and detergency with controlled foaming for high-speed processing." },
-        { series: "Wetting Agents", subSeries: "OT / TDA / DA Series", use: "Wetting agent", properties: "" }
+        { series: "LM-", structure: "Polyoxyethylene Lauryl Amine Ether", properties: "Weak cationic surfactants (Mainly nonionic surfactants)" },
+        { series: "SM-", structure: "Polyoxyethylene Stearyl Amine Ether", properties: "Weak cationic surfactants (Mainly nonionic surfactants)" },
+        { series: "TAM-", structure: "Polyoxyethylene Tallow Amine Ether", properties: "Weak cationic surfactants (Mainly nonionic surfactants)" }
       ]
     },
     {
-      id: "dyeing",
-      name: "Dyeing Auxiliaries",
-      series: "Leveling Agents (Amine Ethers/RP) / Dispersants (SP/DS/TSP)",
-      description: "Crucial dyeing additives that support even color distribution and stability during the textile dyeing phase.",
+      id: "styrenated",
+      name: "Styrenated Ethers",
+      series: "SP / DS / TSP Series",
+      description: "Strong affinity for aromatic systems. Superior dispersion for organic pigments.",
       benefits: [
-        "Ensures perfectly uniform dye uptake and migration control",
-        "Prevents dye agglomeration with premium dispersants",
-        "Boosts overall color yield and fabric appearance"
+        "Exceptionally strong affinity for aromatic systems",
+        "Provides superior dispersion capabilities",
+        "Ideal for organic pigment stabilization"
       ],
       tableData: [
-        { series: "Leveling Agents", subSeries: "Amine Ethers / RP Series", use: "Leveling agent", properties: "Ensures uniform dye uptake and migration control." },
-        { series: "Dispersants", subSeries: "SP / DS / TSP Series", use: "Dispersant", properties: "" }
+        { series: "SP-", structure: "Polyoxyethylene di-stylenated Phenyl Ether", properties: "Polyaromatic polyether" },
+        { series: "DS-", structure: "Polyoxyethylene di-stylenated Phenyl Ether", properties: "Polyaromatic polyether" },
+        { series: "TSP-", structure: "Polyoxyalkylene tri-stylenated Phenyl Ether", properties: "Polyaromatic polyether" }
       ]
     },
     {
-      id: "lubrication",
-      name: "Lubrication & Finishing",
-      series: "Spin Finish Oils (FB Series / PEG Esters)",
-      description: "Advanced finishing oils and lubricants designed to protect yarns and grant the final fabric its premium texture.",
+      id: "peg",
+      name: "PEG / mPEG",
+      series: "Polyoxyethylene Glycols",
+      description: "Highly hydrophilic. Offers viscosity control, water compatibility, and flow modification.",
       benefits: [
-        "Provides excellent fiber cohesion and protection",
-        "Imparts powerful antistatic properties",
-        "Guarantees incredibly smooth mechanical processing"
+        "Highly hydrophilic properties for aqueous systems",
+        "Excellent viscosity control and stabilization",
+        "Enhances water compatibility and flow modification"
       ],
       tableData: [
-        { series: "Spin Finish Oils", subSeries: "FB Series / PEG Esters", use: "Spin finish", properties: "Provides fiber cohesion, antistatic properties, and smooth processing." }
+        { series: "PEG-", structure: "Polyoxyethylene glycol (PEG)", properties: "Solubilizing agent" },
+        { series: "mPEG-", structure: "Polyoxyethylene Methyl Ether (mPEG)", properties: "Solubilizing agent" }
+      ]
+    },
+    {
+      id: "fatty",
+      name: "Fatty Acid Ethoxylates",
+      series: "ML / MS / MO / CO Series",
+      description: "Versatile emulsifiers and solubilizers. Provides lubricity and formulation stability.",
+      benefits: [
+        "Highly versatile emulsifiers and solubilizers",
+        "Improves overall lubricity of the formulation",
+        "Significantly enhances long-term formulation stability"
+      ],
+      tableData: [
+        { series: "ML-", structure: "Polyoxyethylene Monolaurate", properties: "Fatty acid ester; Low toxicity" },
+        { series: "MS-", structure: "Polyoxyethylene Monostearate", properties: "Fatty acid ester; Low toxicity" },
+        { series: "MO-", structure: "Polyoxyethylene Monooleate", properties: "Fatty acid ester; Low toxicity" },
+        { series: "CO-", structure: "Polyoxyethylene Castor Oil", properties: "Fatty acid glyceride ester; Low toxicity" }
+      ]
+    },
+    {
+      id: "ester",
+      name: "Ester resin polyol",
+      series: "BA / BAP Series",
+      description: "Bisphenol-A derivatives. Enhances leveling, viscosity control, and reactivity.",
+      benefits: [
+        "High-quality Bisphenol-A derivatives",
+        "Substantially enhances surface leveling",
+        "Improves viscosity control and chemical reactivity"
+      ],
+      tableData: [
+        { series: "BA-", structure: "Bisphenol A Derivatives", properties: "" },
+        { series: "BAP-", structure: "Bisphenol A Derivatives", properties: "" }
       ]
     }
   ];
@@ -62,7 +97,7 @@ export default function TextileDetail() {
       <section className="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden">
         <div 
           className="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat"
-          style={{ backgroundImage: "url('https://images.unsplash.com/photo-1620799140408-edc6dcb6d633?q=80&w=800&auto=format&fit=crop')" }}
+          style={{ backgroundImage: "url('https://images.unsplash.com/photo-1513364776144-60967b0f800f?q=80&w=800&auto=format&fit=crop')" }}
         >
           <div className="absolute inset-0 bg-emerald-950/80 backdrop-blur-sm" />
         </div>
@@ -74,7 +109,7 @@ export default function TextileDetail() {
           
           <div className="flex items-center gap-4 mb-6">
             <div className="w-16 h-16 rounded-2xl bg-emerald-500/20 flex items-center justify-center border border-emerald-400/30 text-emerald-300">
-                <Scissors className="w-8 h-8" />
+                <Paintbrush className="w-8 h-8" />
             </div>
             <span className="text-emerald-400 font-bold tracking-widest uppercase text-sm border border-emerald-400/30 px-4 py-1.5 rounded-full bg-emerald-950/50">
                 Segment Details
@@ -86,7 +121,7 @@ export default function TextileDetail() {
             animate={{ opacity: 1, y: 0 }}
             className="text-5xl lg:text-[5rem] font-playfair font-bold text-white leading-tight mb-6 tracking-tight"
           >
-            Textile Processing Agents
+            Paint&Pigment <span className="italic text-emerald-400">Solutions</span>
           </motion.h1>
           
           <motion.p 
@@ -95,7 +130,7 @@ export default function TextileDetail() {
             transition={{ delay: 0.1 }}
             className="text-xl text-emerald-50/80 max-w-3xl leading-relaxed font-medium"
           >
-            Comprehensive solutions from pretreatment scouring to final finishing.
+            Eco-friendly Solvents, Dispersants & Monomer Bases
           </motion.p>
         </div>
       </section>
@@ -155,7 +190,7 @@ export default function TextileDetail() {
 
                     {/* Full-width Product Series Table */}
                     {product.tableData && (
-                        <div className="w-full">
+                        <div className="w-full mt-4">
                             <h3 className="text-xl font-bold text-gray-900 mb-6 flex items-center gap-3 border-b border-gray-100 pb-4">
                                 <Database className="w-5 h-5 text-emerald-600" /> Detailed Specifications
                             </h3>
@@ -164,16 +199,16 @@ export default function TextileDetail() {
                                     <thead>
                                         <tr className="bg-emerald-900 text-white">
                                             <th className="px-6 py-5 font-bold tracking-wide rounded-tl-xl whitespace-nowrap">Product Series</th>
-                                            <th className="px-6 py-5 font-bold tracking-wide whitespace-nowrap">Use</th>
+                                            <th className="px-6 py-5 font-bold tracking-wide">Chemical Structure</th>
                                             <th className="px-6 py-5 font-bold tracking-wide rounded-tr-xl">Properties</th>
                                         </tr>
                                     </thead>
                                     <tbody className="divide-y divide-emerald-100 bg-white">
-                                        {product.tableData.map((row: any, rIdx) => (
+                                        {product.tableData.map((row, rIdx) => (
                                             <tr key={rIdx} className="hover:bg-emerald-50/40 transition-colors">
-                                                <td className="px-6 py-5 font-bold text-emerald-700 whitespace-nowrap border-r border-emerald-50/50">{row.subSeries || row.series}</td>
-                                                <td className="px-6 py-5 text-gray-600 font-medium leading-relaxed min-w-[150px] border-r border-emerald-50/50">{row.use}</td>
-                                                <td className="px-6 py-5 text-gray-600 leading-relaxed min-w-[250px]">{row.properties}</td>
+                                                <td className="px-6 py-5 font-bold text-emerald-700 whitespace-nowrap border-r border-emerald-50/50">{row.series}</td>
+                                                <td className="px-6 py-5 text-gray-800 font-medium leading-relaxed min-w-[200px] border-r border-emerald-50/50">{row.structure}</td>
+                                                <td className="px-6 py-5 text-gray-600 leading-relaxed">{row.properties}</td>
                                             </tr>
                                         ))}
                                     </tbody>

@@ -3,53 +3,52 @@
 import { Navigation } from "@/components/Navigation";
 import { Footer } from "@/components/Footer";
 import { motion } from "framer-motion";
-import { ArrowLeft, CheckCircle2, Scissors, Sparkles, Database } from "lucide-react";
+import { ArrowLeft, CheckCircle2, HeartHandshake, Sparkles, Database } from "lucide-react";
 import Link from "next/link";
 
-export default function TextileDetail() {
+export default function CosmeticDetail() {
   const products = [
     {
-      id: "scouring",
-      name: "Scouring & Wetting",
-      series: "Low-Foam Detergents (NF/BTA) / Wetting Agents (OT/TDA/DA)",
-      description: "Pretreatment agents that prepare textile fibers effectively, offering excellent wetting and detergency.",
+      id: "humectants",
+      name: "Humectants & Solvents",
+      series: "Polyethylene Glycols (PEG-200 to 23000)",
+      description: "Premium hydration agents providing an excellent moisture barrier and soft touch to the skin.",
       benefits: [
-        "Excellent wetting and detergency capabilities",
-        "Controlled foaming for high-speed textile processing",
-        "Optimally prepares fibers for further finishing steps"
+        "Delivers effective moisturization and profound water retention",
+        "Functions as a safe and reliable carrier solvent"
       ],
       tableData: [
-        { series: "Low-Foam Detergents", subSeries: "NF / BTA Series", use: "Scouring agent", properties: "Excellent wetting and detergency with controlled foaming for high-speed processing." },
-        { series: "Wetting Agents", subSeries: "OT / TDA / DA Series", use: "Wetting agent", properties: "" }
+        { series: "Polyethylene Glycols", inci: "PEG-200 to 23000", use: "Humectant / Solvent", properties: "Effective moisturization, water retention, and carrier solvent." }
       ]
     },
     {
-      id: "dyeing",
-      name: "Dyeing Auxiliaries",
-      series: "Leveling Agents (Amine Ethers/RP) / Dispersants (SP/DS/TSP)",
-      description: "Crucial dyeing additives that support even color distribution and stability during the textile dyeing phase.",
+      id: "emulsifiers",
+      name: "Emulsifiers & Solubilizers",
+      series: "PEG Esters / Solubilizers (CO / CAW)",
+      description: "Critical formulation stabilizers that ensure a creamy texture and uniform integration of oils and fragrances.",
       benefits: [
-        "Ensures perfectly uniform dye uptake and migration control",
-        "Prevents dye agglomeration with premium dispersants",
-        "Boosts overall color yield and fabric appearance"
+        "Guarantees highly stable emulsions over time",
+        "Imparts a luxurious creamy texture to skin care goods",
+        "Flawlessly solubilizes complex essential oils and fragrances"
       ],
       tableData: [
-        { series: "Leveling Agents", subSeries: "Amine Ethers / RP Series", use: "Leveling agent", properties: "Ensures uniform dye uptake and migration control." },
-        { series: "Dispersants", subSeries: "SP / DS / TSP Series", use: "Dispersant", properties: "" }
+        { series: "PEG Esters", inci: "PEG-Laurate / Stearate / Oleate", use: "Emulsifier", properties: "Stable emulsions with creamy texture." },
+        { series: "Solubilizers", inci: "CO / CAW (PEG Castor Oils)", use: "Solubilizer", properties: "Solubilize oils and fragrances." }
       ]
     },
     {
-      id: "lubrication",
-      name: "Lubrication & Finishing",
-      series: "Spin Finish Oils (FB Series / PEG Esters)",
-      description: "Advanced finishing oils and lubricants designed to protect yarns and grant the final fabric its premium texture.",
+      id: "conditioning",
+      name: "Conditioning Agents",
+      series: "Amine Ethers (LM / SM / TAM Series)",
+      description: "Specialized cationic-like conditioning polymers targeting hair repair and static reduction.",
       benefits: [
-        "Provides excellent fiber cohesion and protection",
-        "Imparts powerful antistatic properties",
-        "Guarantees incredibly smooth mechanical processing"
+        "Provides strong antistatic properties for hair and skin",
+        "Offers a profound softening effect upon application",
+        "The ultimate active base for advanced hair conditioning formulations"
       ],
       tableData: [
-        { series: "Spin Finish Oils", subSeries: "FB Series / PEG Esters", use: "Spin finish", properties: "Provides fiber cohesion, antistatic properties, and smooth processing." }
+        { series: "LM-, SM-", inci: "PEG- Cocamine / Stearamine", use: "Conditioner", properties: "Conditioning, softening, and improved manageability" },
+        { series: "TAM", inci: "PEG- Tallow amine", use: "Emollient / Surfactant", properties: "Emolliency, surface activity, and conditioning performance" }
       ]
     }
   ];
@@ -62,7 +61,7 @@ export default function TextileDetail() {
       <section className="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden">
         <div 
           className="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat"
-          style={{ backgroundImage: "url('https://images.unsplash.com/photo-1620799140408-edc6dcb6d633?q=80&w=800&auto=format&fit=crop')" }}
+          style={{ backgroundImage: "url('https://images.unsplash.com/photo-1556228578-0d85b1a4d571?q=80&w=800&auto=format&fit=crop')" }}
         >
           <div className="absolute inset-0 bg-emerald-950/80 backdrop-blur-sm" />
         </div>
@@ -74,7 +73,7 @@ export default function TextileDetail() {
           
           <div className="flex items-center gap-4 mb-6">
             <div className="w-16 h-16 rounded-2xl bg-emerald-500/20 flex items-center justify-center border border-emerald-400/30 text-emerald-300">
-                <Scissors className="w-8 h-8" />
+                <HeartHandshake className="w-8 h-8" />
             </div>
             <span className="text-emerald-400 font-bold tracking-widest uppercase text-sm border border-emerald-400/30 px-4 py-1.5 rounded-full bg-emerald-950/50">
                 Segment Details
@@ -86,7 +85,7 @@ export default function TextileDetail() {
             animate={{ opacity: 1, y: 0 }}
             className="text-5xl lg:text-[5rem] font-playfair font-bold text-white leading-tight mb-6 tracking-tight"
           >
-            Textile Processing Agents
+            Personal Care & Cosmetic
           </motion.h1>
           
           <motion.p 
@@ -95,7 +94,7 @@ export default function TextileDetail() {
             transition={{ delay: 0.1 }}
             className="text-xl text-emerald-50/80 max-w-3xl leading-relaxed font-medium"
           >
-            Comprehensive solutions from pretreatment scouring to final finishing.
+            High-purity ingredients for skin, hair, and body care formulations.
           </motion.p>
         </div>
       </section>
@@ -164,14 +163,16 @@ export default function TextileDetail() {
                                     <thead>
                                         <tr className="bg-emerald-900 text-white">
                                             <th className="px-6 py-5 font-bold tracking-wide rounded-tl-xl whitespace-nowrap">Product Series</th>
+                                            <th className="px-6 py-5 font-bold tracking-wide">INCI Name</th>
                                             <th className="px-6 py-5 font-bold tracking-wide whitespace-nowrap">Use</th>
                                             <th className="px-6 py-5 font-bold tracking-wide rounded-tr-xl">Properties</th>
                                         </tr>
                                     </thead>
                                     <tbody className="divide-y divide-emerald-100 bg-white">
-                                        {product.tableData.map((row: any, rIdx) => (
+                                        {product.tableData.map((row, rIdx) => (
                                             <tr key={rIdx} className="hover:bg-emerald-50/40 transition-colors">
-                                                <td className="px-6 py-5 font-bold text-emerald-700 whitespace-nowrap border-r border-emerald-50/50">{row.subSeries || row.series}</td>
+                                                <td className="px-6 py-5 font-bold text-emerald-700 whitespace-nowrap border-r border-emerald-50/50">{row.series}</td>
+                                                <td className="px-6 py-5 text-gray-800 font-medium leading-relaxed min-w-[200px] border-r border-emerald-50/50">{row.inci}</td>
                                                 <td className="px-6 py-5 text-gray-600 font-medium leading-relaxed min-w-[150px] border-r border-emerald-50/50">{row.use}</td>
                                                 <td className="px-6 py-5 text-gray-600 leading-relaxed min-w-[250px]">{row.properties}</td>
                                             </tr>

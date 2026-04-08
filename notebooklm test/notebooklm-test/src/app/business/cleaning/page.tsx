@@ -3,53 +3,75 @@
 import { Navigation } from "@/components/Navigation";
 import { Footer } from "@/components/Footer";
 import { motion } from "framer-motion";
-import { ArrowLeft, CheckCircle2, Scissors, Sparkles, Database } from "lucide-react";
+import { ArrowLeft, CheckCircle2, Droplets, Sparkles, Database } from "lucide-react";
 import Link from "next/link";
 
-export default function TextileDetail() {
+export default function CleaningDetail() {
   const products = [
     {
-      id: "scouring",
-      name: "Scouring & Wetting",
-      series: "Low-Foam Detergents (NF/BTA) / Wetting Agents (OT/TDA/DA)",
-      description: "Pretreatment agents that prepare textile fibers effectively, offering excellent wetting and detergency.",
+      id: "low-foam",
+      name: "Low-Foam Surfactants",
+      series: "LF / NF / TDA Series",
+      structure: "Polyoxyalkylene Alkyl Ether / Tridecyl Ether",
+      description: "Advanced low-foaming agents designed specifically for industrial cleaning where rapid and high-efficiency dynamic soil removal is required.",
       benefits: [
-        "Excellent wetting and detergency capabilities",
-        "Controlled foaming for high-speed textile processing",
-        "Optimally prepares fibers for further finishing steps"
+        "High wetting power with minimal foam",
+        "Ideal for CIP & high-pressure spray cleaning",
+        "Excellent detergency & rinsing properties"
       ],
       tableData: [
-        { series: "Low-Foam Detergents", subSeries: "NF / BTA Series", use: "Scouring agent", properties: "Excellent wetting and detergency with controlled foaming for high-speed processing." },
-        { series: "Wetting Agents", subSeries: "OT / TDA / DA Series", use: "Wetting agent", properties: "" }
+        { series: "LF", structure: "Polyoxyalkylene alkyl ether", use: "Low-foam Surfactant", properties: "Delivering excellent wetting, low foaming, and detergency for CIP systems" },
+        { series: "NF", structure: "Polyoxyalkylene alkyl ether", use: "Defoamer / Wetting", properties: "Controlled foam and efficient soil removal in dynamic systems" },
+        { series: "DA", structure: "Polyoxyethylene Isodecyl Ether", use: "Wetting / Emulsifier", properties: "Offering strong wetting, emulsification, and low-foam performance" },
+        { series: "TDA", structure: "Polyoxyethylene tridecyl ether", use: "Low-foam Cleaner", properties: "Low-foaming wetting and powerful detergency for industrial cleaning" }
       ]
     },
     {
-      id: "dyeing",
-      name: "Dyeing Auxiliaries",
-      series: "Leveling Agents (Amine Ethers/RP) / Dispersants (SP/DS/TSP)",
-      description: "Crucial dyeing additives that support even color distribution and stability during the textile dyeing phase.",
+      id: "emulsifiers",
+      name: "Emulsifiers & Degreasers",
+      series: "LA / OA / CSA Series",
+      structure: "Polyoxyethylene Lauryl / Oleyl / Cetyl Stearyl Ether",
+      description: "Robust emulsification systems formulated to lift and disperse heavy industrial grease and oils from surfaces efficiently.",
       benefits: [
-        "Ensures perfectly uniform dye uptake and migration control",
-        "Prevents dye agglomeration with premium dispersants",
-        "Boosts overall color yield and fabric appearance"
+        "Strong grease removal & oil emulsification",
+        "Stable formulation for heavy-duty cleaners",
+        "Biodegradable & efficient soil suspension"
       ],
       tableData: [
-        { series: "Leveling Agents", subSeries: "Amine Ethers / RP Series", use: "Leveling agent", properties: "Ensures uniform dye uptake and migration control." },
-        { series: "Dispersants", subSeries: "SP / DS / TSP Series", use: "Dispersant", properties: "" }
+        { series: "LA", structure: "Polyoxyethylene Lauryl Ether", use: "Wetting / Detergent", properties: "Efficient wetting, detergency, and emulsification with good biodegradability" },
+        { series: "OA", structure: "Polyoxyethylene Oleyl Ether", use: "Emulsifier / Degreaser", properties: "Strong emulsification and grease removal with enhanced spreading" },
+        { series: "CSA", structure: "Polyoxyethylene Cetyl Stearyl Ether", use: "Emulsifier / Stabilizer", properties: "Offering excellent emulsification and formulation stability in concentrated systems" }
       ]
     },
     {
-      id: "lubrication",
-      name: "Lubrication & Finishing",
-      series: "Spin Finish Oils (FB Series / PEG Esters)",
-      description: "Advanced finishing oils and lubricants designed to protect yarns and grant the final fabric its premium texture.",
+      id: "defoamers",
+      name: "Defoamers & Foam Control",
+      series: "RP / PE Series",
+      structure: "EO/PO Block Copolymers (Reverse Pluronic type)",
+      description: "Highly effective foam knockdown and prevention chemistry specifically tailored for aqueous systems and severe treatment environments.",
       benefits: [
-        "Provides excellent fiber cohesion and protection",
-        "Imparts powerful antistatic properties",
-        "Guarantees incredibly smooth mechanical processing"
+        "Efficient foam knockdown in aqueous systems",
+        "Temperature-responsive solubility (cloud point)",
+        "Prevents foam buildup in treatment tanks"
       ],
       tableData: [
-        { series: "Spin Finish Oils", subSeries: "FB Series / PEG Esters", use: "Spin finish", properties: "Provides fiber cohesion, antistatic properties, and smooth processing." }
+        { series: "RP", structure: "Poly(oxyethylene-oxypropylene) copolymer (PO-EO-PO Type)", use: "Defoamer", properties: "Excellent defoaming and wetting control in aqueous systems" },
+        { series: "PE", structure: "Poly(ethylene-propylene) copolymer (EO-PPG-EO Block copolymer)", use: "Dispersant / Defoamer", properties: "Providing dispersion stability and foam suppression in water treatment systems" }
+      ]
+    },
+    {
+      id: "dispersants",
+      name: "High-Performance Dispersants",
+      series: "TE Series",
+      structure: "Polyoxyalkylene Ethylenediamine Ether",
+      description: "Specialized high-performance molecules aimed at harsh condition dispersion, significantly extending the limits of structural suspension.",
+      benefits: [
+        "Robust wetting & dispersing in harsh conditions",
+        "Prevents scale & soil redeposition",
+        "Synergistic performance with other surfactants"
+      ],
+      tableData: [
+        { series: "TE", structure: "Polyoxyalkylene ethylenediamine ether", use: "High-performance Surfactant", properties: "Strong wetting, dispersing, and defoaming performance under harsh conditions" }
       ]
     }
   ];
@@ -62,7 +84,7 @@ export default function TextileDetail() {
       <section className="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden">
         <div 
           className="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat"
-          style={{ backgroundImage: "url('https://images.unsplash.com/photo-1620799140408-edc6dcb6d633?q=80&w=800&auto=format&fit=crop')" }}
+          style={{ backgroundImage: "url('/images/cleaning.png')" }}
         >
           <div className="absolute inset-0 bg-emerald-950/80 backdrop-blur-sm" />
         </div>
@@ -74,7 +96,7 @@ export default function TextileDetail() {
           
           <div className="flex items-center gap-4 mb-6">
             <div className="w-16 h-16 rounded-2xl bg-emerald-500/20 flex items-center justify-center border border-emerald-400/30 text-emerald-300">
-                <Scissors className="w-8 h-8" />
+                <Droplets className="w-8 h-8" />
             </div>
             <span className="text-emerald-400 font-bold tracking-widest uppercase text-sm border border-emerald-400/30 px-4 py-1.5 rounded-full bg-emerald-950/50">
                 Segment Details
@@ -86,7 +108,7 @@ export default function TextileDetail() {
             animate={{ opacity: 1, y: 0 }}
             className="text-5xl lg:text-[5rem] font-playfair font-bold text-white leading-tight mb-6 tracking-tight"
           >
-            Textile Processing Agents
+            I&I Cleaning & Water Management
           </motion.h1>
           
           <motion.p 
@@ -95,7 +117,7 @@ export default function TextileDetail() {
             transition={{ delay: 0.1 }}
             className="text-xl text-emerald-50/80 max-w-3xl leading-relaxed font-medium"
           >
-            Comprehensive solutions from pretreatment scouring to final finishing.
+            Industrial Cleaning, Degreasing & Water Management
           </motion.p>
         </div>
       </section>
@@ -122,11 +144,16 @@ export default function TextileDetail() {
                                 <h2 className="text-3xl lg:text-4xl font-playfair font-bold text-gray-900 mb-6">
                                     {product.name}
                                 </h2>
-                                <p className="text-lg text-gray-600 leading-relaxed font-medium mb-8">
+                                <p className="text-lg text-gray-600 leading-relaxed font-medium mb-6">
                                     {product.description}
                                 </p>
+                                
+                                <div className="p-5 bg-gray-50 rounded-xl border border-gray-100 mb-8 inline-block w-full">
+                                    <span className="text-xs font-bold text-gray-500 uppercase tracking-widest mb-2 block">Chemical Structure</span>
+                                    <span className="text-emerald-700 font-bold">{product.structure}</span>
+                                </div>
                             </div>
-                            
+
                             <a 
                                 href="https://www.korgc.com/eng/cs/menu_03.html"
                                 target="_blank"
@@ -140,7 +167,7 @@ export default function TextileDetail() {
                         {/* Right side: Benefits */}
                         <div className="lg:w-1/2 bg-gray-50 rounded-2xl p-8 border border-gray-100/50 flex flex-col justify-center">
                             <h3 className="font-bold text-gray-900 mb-6 tracking-wide text-lg flex items-center gap-2">
-                                <Sparkles className="w-5 h-5 text-emerald-500" /> Key Formulatory Benefits
+                                <Sparkles className="w-5 h-5 text-emerald-500" /> Key Benefits
                             </h3>
                             <ul className="space-y-4">
                                 {product.benefits.map((benefit, bIdx) => (
@@ -163,15 +190,17 @@ export default function TextileDetail() {
                                 <table className="w-full text-left text-sm lg:text-base border-collapse">
                                     <thead>
                                         <tr className="bg-emerald-900 text-white">
-                                            <th className="px-6 py-5 font-bold tracking-wide rounded-tl-xl whitespace-nowrap">Product Series</th>
+                                            <th className="px-6 py-5 font-bold tracking-wide rounded-tl-xl whitespace-nowrap">Product</th>
+                                            <th className="px-6 py-5 font-bold tracking-wide">Chemical Structure</th>
                                             <th className="px-6 py-5 font-bold tracking-wide whitespace-nowrap">Use</th>
                                             <th className="px-6 py-5 font-bold tracking-wide rounded-tr-xl">Properties</th>
                                         </tr>
                                     </thead>
                                     <tbody className="divide-y divide-emerald-100 bg-white">
-                                        {product.tableData.map((row: any, rIdx) => (
+                                        {product.tableData.map((row, rIdx) => (
                                             <tr key={rIdx} className="hover:bg-emerald-50/40 transition-colors">
-                                                <td className="px-6 py-5 font-bold text-emerald-700 whitespace-nowrap border-r border-emerald-50/50">{row.subSeries || row.series}</td>
+                                                <td className="px-6 py-5 font-bold text-emerald-700 whitespace-nowrap border-r border-emerald-50/50">{row.series}</td>
+                                                <td className="px-6 py-5 text-gray-800 font-medium leading-relaxed min-w-[200px] border-r border-emerald-50/50">{row.structure}</td>
                                                 <td className="px-6 py-5 text-gray-600 font-medium leading-relaxed min-w-[150px] border-r border-emerald-50/50">{row.use}</td>
                                                 <td className="px-6 py-5 text-gray-600 leading-relaxed min-w-[250px]">{row.properties}</td>
                                             </tr>
