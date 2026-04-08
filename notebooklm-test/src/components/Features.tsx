@@ -69,10 +69,10 @@ export function Features() {
       description: "High-quality intermediates for various chemical synthesis and manufacturing processes.",
       link: "/business/reaction",
       details: [
-        { title: "Bisphenol-A Derivatives", items: ["BA / BAP / BPE Series"] },
+        { title: "Bisphenol-A Derivatives", items: ["BA / BAP Series"] },
         { title: "Multifunctional Polyols", items: ["TM / TP / EP / EPP / GP Series"] },
-        { title: "Phenol / Linear Polyols", items: ["PH / OPP / NP / DS Series", "PEG / PE / MEG / DIG Series"] },
-        { title: "Specialty Alcohols", items: ["TH / RS / HD / NPG Series"] },
+        { title: "Phenol / Linear Polyols", items: ["PH / OPP / NP / DS Series", "PEG / PE / MEG Series"] },
+        { title: "Specialty Alcohols", items: ["RS / HD / NPG Series"] },
         { title: "High-Purity Polyols Platform", items: ["SK / RT / TR / FC Series"] }
       ]
     },
