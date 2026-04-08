@@ -24,10 +24,9 @@ export default function ReactionDetail() {
         { name: "BPE" }
       ],
       tableData: [
-        { series: "KONION BF-series", structure: "Polyoxyethylene Bisphenol-A Ether", use: "Display, Automotive", properties: "High refractive index, good elasticity" },
-        { series: "KONION BA-series", structure: "Polyoxyethylene Bisphenol-A Ether", use: "Display, Coating, 3D printing, Resin", properties: "High refractive index, low volatility, Hardness" },
-        { series: "KONION BAP-series", structure: "Polyoxypropylene Bisphenol-A Ether", use: "Coating, Ink", properties: "High refractive index, low volatility, Flexibility, Water resistance" },
-        { series: "KONION BPE-series", structure: "Polyoxyalkylene Bisphenol-A Ether", use: "Display, Coating, 3D printing, Resin", properties: "High refractive index, low volatility" }
+        { series: "BA-", structure: "Polyoxyethylene Bisphenol-A Ether", use: "Display, Coating, 3D printing, Resin", properties: "High refractive index, low volatility, Hardness" },
+        { series: "BAP-", structure: "Polyoxypropylene Bisphenol-A Ether", use: "Coating, Ink", properties: "High refractive index, low volatility, Flexibility, Water resistance" },
+        { series: "BPE-", structure: "Polyoxyalkylene Bisphenol-A Ether", use: "Display, Coating, 3D printing, Resin", properties: "High refractive index, low volatility" }
       ]
     },
     {
@@ -48,12 +47,12 @@ export default function ReactionDetail() {
         { name: "GP" }
       ],
       tableData: [
-        { series: "KONION GP-series", structure: "Polyoxypropylene Glycerol Ether", use: "Paint, Ink", properties: "Fast cure speed, good hardness, good chemical resistance" },
-        { series: "KONION TM-series", structure: "Polyoxyethylene Trimethylolpropane Ether", use: "Commodity, Ink, Resin", properties: "Good flexibility, fast cure speed, good chemical resistance" },
-        { series: "KONION TP-series", structure: "Polyoxypropylene Trimethylolpropane Ether", use: "Coating, Ink", properties: "Low skin irritation" },
-        { series: "KONION EP-series", structure: "Polyoxyethylene Pentaerythritol Ether", use: "Hard Coating", properties: "Fast cure speed, good chemical resistance, good scratch" },
-        { series: "KONION EPP-series", structure: "Polyoxypropylene Pentaerythritol Ether", use: "UV/EB Ink", properties: "Flexibility, Low shrinkage" },
-        { series: "KONION DPE-series", structure: "Polyoxyethylene Dipentaerythritol Ether", use: "Paint, UV Coating", properties: "Scratch resistance, elasticity, flexibility" }
+        { series: "GP-", structure: "Polyoxypropylene Glycerol Ether", use: "Paint, Ink", properties: "Fast cure speed, good hardness, good chemical resistance" },
+        { series: "TM-", structure: "Polyoxyethylene Trimethylolpropane Ether", use: "Commodity, Ink, Resin", properties: "Good flexibility, fast cure speed, good chemical resistance" },
+        { series: "TP-", structure: "Polyoxypropylene Trimethylolpropane Ether", use: "Coating, Ink", properties: "Low skin irritation" },
+        { series: "EP-", structure: "Polyoxyethylene Pentaerythritol Ether", use: "Hard Coating", properties: "Fast cure speed, good chemical resistance, good scratch" },
+        { series: "EPP-", structure: "Polyoxypropylene Pentaerythritol Ether", use: "UV/EB Ink", properties: "Flexibility, Low shrinkage" },
+        { series: "DPE-", structure: "Polyoxyethylene Dipentaerythritol Ether", use: "Paint, UV Coating", properties: "Scratch resistance, elasticity, flexibility" }
       ]
     },
     {
@@ -73,9 +72,9 @@ export default function ReactionDetail() {
         { name: "DS" }
       ],
       tableData: [
-        { series: "KONION PH-series", structure: "Polyoxyethylene Phenyl Ether", use: "Display, Adhesive", properties: "Low volatility, good adhesion, low shrinkage" },
-        { series: "KONION OPP-series", structure: "Polyoxyethylene Phenylphenol Ether", use: "Display", properties: "High refractive index, low shrinkage, good adhesion" },
-        { series: "KONION NP-series", structure: "Polyoxyethylene Nonylphenyl Ether", use: "Ink, Adhesive, DFR", properties: "Emulsification, Wettability" }
+        { series: "PH-", structure: "Polyoxyethylene Phenyl Ether", use: "Display, Adhesive", properties: "Low volatility, good adhesion, low shrinkage" },
+        { series: "OPP-", structure: "Polyoxyethylene Phenylphenol Ether", use: "Display", properties: "High refractive index, low shrinkage, good adhesion" },
+        { series: "NP-", structure: "Polyoxyethylene Nonylphenyl Ether", use: "Ink, Adhesive, DFR", properties: "Emulsification, Wettability" }
       ]
     },
     {
@@ -95,10 +94,10 @@ export default function ReactionDetail() {
         { name: "DIG" }
       ],
       tableData: [
-        { series: "KONION PEG-series", structure: "Polyethylene Glycol (PEG)", use: "Hydrogel, Etchant", properties: "Water solubility, Flexibility" },
-        { series: "KONION PE-series", structure: "Poly(oxyethylene-oxypropylene) Block Copolymer", use: "Display, Adhesive", properties: "Good flexibility, low odor, low skin irritation" },
-        { series: "KONION MEG-series", structure: "Methoxy Polyethylene Glycol", use: "Coating, Ink", properties: "Low viscosity, Steric hindrance" },
-        { series: "KONION DIG-series", structure: "Polyoxyethylene Diglycerol Ether", use: "Cosmetics, Hydrogel", properties: "Moisture retention, Skin mildness" }
+        { series: "PEG-", structure: "Polyethylene Glycol (PEG)", use: "Hydrogel, Etchant", properties: "Water solubility, Flexibility" },
+        { series: "PE-", structure: "Poly(oxyethylene-oxypropylene) Block Copolymer", use: "Display, Adhesive", properties: "Good flexibility, low odor, low skin irritation" },
+        { series: "MEG-", structure: "Methoxy Polyethylene Glycol", use: "Coating, Ink", properties: "Low viscosity, Steric hindrance" },
+        { series: "DIG-", structure: "Polyoxyethylene Diglycerol Ether", use: "Cosmetics, Hydrogel", properties: "Moisture retention, Skin mildness" }
       ]
     },
     {
@@ -118,10 +117,10 @@ export default function ReactionDetail() {
         { name: "NPG", detail: "Neopentyl glycol" }
       ],
       tableData: [
-        { series: "KONION TH-series", structure: "Polyoxyethylene Tetrahydrofurfuryl Ether", use: "Adhesive, Ink", properties: "Good adhesion, low toxicity, low viscosity" },
-        { series: "KONION RS-series", structure: "Polyoxyethylene Allyl Ether", use: "Coating, Ink", properties: "Good water solubility, excellent wetting" },
-        { series: "KONION HD-series", structure: "Polyoxyethylene Hexanediol Ether", use: "Commodity, Ink", properties: "Good dilution power, weatherability, fast cure speed" },
-        { series: "KONION NPG-series", structure: "Polyoxypropylene Neopentyl Glycol Ether", use: "Coating, Ink", properties: "Good flexibility, low skin irritation, weatherability" }
+        { series: "TH-", structure: "Polyoxyethylene Tetrahydrofurfuryl Ether", use: "Adhesive, Ink", properties: "Good adhesion, low toxicity, low viscosity" },
+        { series: "RS-", structure: "Polyoxyethylene Allyl Ether", use: "Coating, Ink", properties: "Good water solubility, excellent wetting" },
+        { series: "HD-", structure: "Polyoxyethylene Hexanediol Ether", use: "Commodity, Ink", properties: "Good dilution power, weatherability, fast cure speed" },
+        { series: "NPG-", structure: "Polyoxypropylene Neopentyl Glycol Ether", use: "Coating, Ink", properties: "Good flexibility, low skin irritation, weatherability" }
       ]
     },
     {
