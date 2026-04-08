@@ -99,21 +99,19 @@ export default function ReactionDetail() {
     {
       id: "specialty",
       name: "Specialty Alcohols",
-      series: "TH / RS / HD / NPG Series",
-      description: "Includes diverse bases like TH (Tetrahydrofurfuryl), RS (Allyl), HD (Hexanediol), and NPG (Neopentyl glycol).",
+      series: "RS / HD / NPG Series",
+      description: "Includes diverse bases like RS (Allyl), HD (Hexanediol), and NPG (Neopentyl glycol).",
       benefits: [
         "Significantly improves both adhesion and flexibility",
         "Engineered and formulated to ensure low skin irritation",
         "Versatile chemical foundation for specialized resin modifications"
       ],
       seriesList: [
-        { name: "TH", detail: "Tetrahydrofurfuryl" },
         { name: "RS", detail: "Allyl" },
         { name: "HD", detail: "Hexanediol" },
         { name: "NPG", detail: "Neopentyl glycol" }
       ],
       tableData: [
-        { series: "TH-", structure: "Polyoxyethylene Tetrahydrofurfuryl Ether", use: "Adhesive, Ink", properties: "Good adhesion, low toxicity, low viscosity" },
         { series: "RS-", structure: "Polyoxyethylene Allyl Ether", use: "Coating, Ink", properties: "Good water solubility, excellent wetting" },
         { series: "HD-", structure: "Polyoxyethylene Hexanediol Ether", use: "Commodity, Ink", properties: "Good dilution power, weatherability, fast cure speed" },
         { series: "NPG-", structure: "Polyoxypropylene Neopentyl Glycol Ether", use: "Coating, Ink", properties: "Good flexibility, low skin irritation, weatherability" }
