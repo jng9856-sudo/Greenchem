@@ -78,7 +78,7 @@ export default function ReactionDetail() {
     {
       id: "linear-polyols",
       name: "Linear Polyols & Diluents",
-      series: "PEG / PE / MEG / DIG Series",
+      series: "PEG / PE / MEG Series",
       description: "Highly efficient diluents and polyols designed to regulate viscosity and improve flow properties seamlessly.",
       benefits: [
         "Excellent water solubility for aqueous systems",
@@ -88,14 +88,12 @@ export default function ReactionDetail() {
       seriesList: [
         { name: "PEG" },
         { name: "PE" },
-        { name: "MEG" },
-        { name: "DIG" }
+        { name: "MEG" }
       ],
       tableData: [
         { series: "PEG-", structure: "Polyethylene Glycol (PEG)", use: "Hydrogel, Etchant", properties: "Water solubility, Flexibility" },
         { series: "PE-", structure: "Poly(oxyethylene-oxypropylene) Block Copolymer", use: "Display, Adhesive", properties: "Good flexibility, low odor, low skin irritation" },
-        { series: "MEG-", structure: "Methoxy Polyethylene Glycol", use: "Coating, Ink", properties: "Low viscosity, Steric hindrance" },
-        { series: "DIG-", structure: "Polyoxyethylene Diglycerol Ether", use: "Cosmetics, Hydrogel", properties: "Moisture retention, Skin mildness" }
+        { series: "MEG-", structure: "Methoxy Polyethylene Glycol", use: "Coating, Ink", properties: "Low viscosity, Steric hindrance" }
       ]
     },
     {
