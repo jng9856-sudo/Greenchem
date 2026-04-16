@@ -8,7 +8,6 @@ import Link from "next/link";
 export function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
-  const [showContact, setShowContact] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -52,39 +51,13 @@ export function Navigation() {
         </div>
 
         <div className="hidden md:flex items-center relative">
-          <button 
-            onClick={() => setShowContact(!showContact)}
-            onBlur={() => setTimeout(() => setShowContact(false), 200)}
+          <a 
+            href="https://www.korgc.com/eng/cs/menu_05.html"
+            target="_blank"
+            rel="noopener noreferrer"
             className={`text-base md:text-lg font-bold tracking-wide px-8 py-3 rounded-full transition-all duration-300 ${isScrolled ? 'bg-emerald-600 text-white hover:bg-emerald-700 shadow-lg shadow-emerald-500/20' : 'bg-white/10 hover:bg-white/20 text-white backdrop-blur-md border border-white/20'}`}>
             Contact Us
-          </button>
-
-          {/* Contact Info Dropdown */}
-          <div className={`absolute top-full right-0 mt-4 w-[420px] bg-white rounded-2xl shadow-2xl border border-gray-100 p-6 text-left transition-all duration-300 ${showContact ? 'opacity-100 visible translate-y-0' : 'opacity-0 invisible translate-y-2'}`}>
-            <div className="space-y-5 text-sm text-gray-600 leading-relaxed font-medium">
-              {/* Head Office */}
-              <div>
-                <h4 className="font-extrabold text-emerald-800 mb-1 text-base">Head Office/Plant/R&D</h4>
-                <p>103, Dokgot2-ro, Daesan-eup, Seosan-si, Chungcheongnam-do, Korea, 31900</p>
-                <p className="text-gray-500 mt-0.5">Tel: +82-41-661-5000</p>
-              </div>
-              
-              {/* Seoul Office */}
-              <div>
-                <h4 className="font-extrabold text-emerald-800 mb-1 text-base">Seoul Office (Sales Department)</h4>
-                <p>15F, Changgang Building, 86, Mapo-daero, Mapo-gu, Seoul, Korea, 04168</p>
-                <p className="text-gray-500 mt-0.5">Tel: +82-2-3158-8823</p>
-              </div>
-              
-              {/* R&D Center */}
-              <div>
-                <h4 className="font-extrabold text-emerald-800 mb-1 text-base">R&D Center</h4>
-                <p>6F, 16-9, Dongbaekjungang-ro 16beon-gil, Giheung-gu, Yongin-si, Gyeonggi-do, Korea, 17015</p>
-              </div>
-            </div>
-            {/* Triangle pointer */}
-            <div className="absolute -top-2 right-12 w-4 h-4 bg-white border-t border-l border-gray-100 rotate-45" />
-          </div>
+          </a>
         </div>
 
         <button 
@@ -106,7 +79,9 @@ export function Navigation() {
             <Link href="/#about" className="text-lg font-bold hover:text-emerald-600">About Us</Link>
             <Link href="/#business" className="text-lg font-bold hover:text-emerald-600">Business</Link>
             <Link href="/#materials" className="text-lg font-bold hover:text-emerald-600">Other Materials</Link>
-            <button className="mt-4 bg-emerald-600 text-white font-bold py-3 rounded-xl">Contact Us</button>
+            <a href="https://www.korgc.com/eng/cs/menu_05.html" target="_blank" rel="noopener noreferrer" className="mt-4 bg-emerald-600 text-white font-bold py-3 rounded-xl text-center block w-full">
+              Contact Us
+            </a>
           </div>
         </motion.div>
       )}
